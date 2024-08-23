@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@types/node": "^22.5.0",
+    "@types/node-telegram-bot-api": "^0.64.7",
+    "dotenv": "^16.4.5",
+    "node-telegram-bot-api": "^0.66.0",
+    "telegram": "^2.23.10",
+    "typescript": "^5.5.4"
+  },
+  "scripts": {
+    "bot": "npx ts-node Bot.ts"
+  }
+}
