@@ -37,14 +37,14 @@ async function generateInviteLink(client: TelegramClient, groupId: string) {
   }
 }
 
-// This function creates a new group &
+// This function creates a new group & an invite link
 // Gotta get a 2FA when logging in first as an account, after that the session continues working
 async function main() {
   const client = new TelegramClient("user_sesh", parseInt(`${process.env.API}`), `${process.env.API_HASH}`, {});
   await client.start({
     phoneCode: async () => `${process.env.CODE}`,
-    phoneNumber: `${process.env.PHONE}`, // Replace with your phone number
-    password: async () => `${process.env.PASSWORD}`, // Replace with your password if 2FA is enabled
+    phoneNumber: `${process.env.PHONE}`,
+    password: async () => `${process.env.PASSWORD}`,
     onError: (err) => console.log(err),
   });
   const groupId = await createTelegramGroup(client, "Alma (Bot Testing) 😉", ["@almalabsbot"]);

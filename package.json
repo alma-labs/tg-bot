@@ -8,6 +8,6 @@
     "typescript": "^5.5.4"
   },
   "scripts": {
-    "bot": "npx ts-node Bot.ts"
+    "bot": "npx ts-node src/telegramBot.ts"
   }
 }
